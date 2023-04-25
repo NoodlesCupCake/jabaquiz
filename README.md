@@ -1,7 +1,7 @@
 # Jabaquiz
 Jabaquiz is a two-player game inspired by Supaquiz designed for players to have fun and gain knowledge while playing the game with friends using Supabase CLI. This app is built by using Flutter and Dart for Android, iOS, but right now Web Application is the most suitable platform. In addtion, this project is a self-hosting which requires you to install Docker Desktop, and Supabase for accessing the database and authenication. 
 
-_(FYI: This project's purpose is solely for class submission, we add many functions and constraints to make the code better than it was. For instance, exceptions to validat the setting's inputs, limit the number of the player to two players per game at maximum, and clear the data for each questions, answers once the game has been completed, and more. We did not only copy and paste)_
+_(FYI: This project's purpose is solely for class submission, we add many functions and constraints to make the code better than it was. For instance, exceptions to validate setting's inputs, limit the number of the player to two players per game at maximum, and clear the data for each questions, answers once the game has been completed, and more. We did not only copy and paste!)_
 
 ## Prerequisites
 * Flutter SDK
