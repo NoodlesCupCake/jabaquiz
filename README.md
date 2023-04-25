@@ -31,6 +31,6 @@ To play the Jabaquiz, please follow these simple steps:
 flutter run
 ```
 
-##Limitation
+## Limitation
 * This project still has a bug that prevent me from buidling for mobile application such as, the android emulator/device cannot connect to a localhost directly since I use localhost(127.0.0.1) instead of using 10.0.2.2.
 * The access-token can last only 1 hour for each authenicated user.
