@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:jabaquiz/models/game_status.dart';
 import 'package:jabaquiz/models/multiplayer_game.dart';
 import 'package:jabaquiz/models/player_score.dart';
-import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services.dart';
 import 'package:jabaquiz/theme.dart';
-import 'package:jabaquiz/views/title_screen.dart';
 import 'package:jabaquiz/widgets/app_button.dart';
 
 class MultiplayerGameScoreboard extends StatelessWidget {

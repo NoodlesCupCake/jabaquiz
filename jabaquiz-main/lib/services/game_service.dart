@@ -7,7 +7,7 @@ import 'package:jabaquiz/models/game_status.dart';
 import 'package:jabaquiz/models/multiplayer_game.dart';
 import 'package:jabaquiz/models/player_score.dart';
 import 'package:jabaquiz/models/trivia_question.dart';
-import 'package:jabaquiz/repositories/trivia_repository.dart';
+import 'package:jabaquiz/services/trivia_service.dart';
 import 'package:jabaquiz/services/auth_service.dart';
 
 class GameService {
@@ -189,8 +189,6 @@ class GameService {
     return decoded.isNotEmpty ? decoded.first : null;
   }
 
-  /// Setup an instance of `HashIds`. Removes 'O' and 'l' from the alphabet
-  /// as they look too similar to 0 and 1 respectively.
   static HashIds get _initHashIds {
     return HashIds(
       minHashLength: 5,

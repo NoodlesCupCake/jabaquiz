@@ -45,7 +45,7 @@ class AppInputField extends StatelessWidget {
         decoration: InputDecoration(
           helperText: helperText ?? 'Please type your input here',
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(32.0)),
+            borderRadius: BorderRadius.all(Radius.circular(2.0)),
             borderSide: BorderSide(
               color: bamYellow,
               width: 2,

@@ -4,7 +4,7 @@ import 'package:jabaquiz/models/multiplayer_game.dart';
 import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services.dart';
 import 'package:jabaquiz/theme.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_view.dart';
+import 'package:jabaquiz/views/multiplayer_game/inside_game.dart';
 import 'package:jabaquiz/widgets/app_button.dart';
 import 'package:jabaquiz/widgets/players_in_game.dart';
 
@@ -38,7 +38,7 @@ class MultiplayerGameHostIntro extends StatelessWidget {
         ),
         PlayersInGame(gameId: game.id),
         const SizedBox(height: 24.0),
-        AppButton.expanded(
+        AppButton(
           label: 'Start game',
           onPressed: () async {
             final gameService = Services.of(context).gameService;

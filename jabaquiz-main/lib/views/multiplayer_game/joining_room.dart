@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services.dart';
 import 'package:jabaquiz/services/game_service.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_player_intro.dart';
+import 'package:jabaquiz/views/multiplayer_game/player_interface.dart';
 import 'package:jabaquiz/widgets/app_button.dart';
 import 'package:jabaquiz/widgets/app_input_field.dart';
 import 'package:jabaquiz/widgets/app_screen.dart';
@@ -25,7 +25,7 @@ class MultiplayerGameSearch extends StatelessWidget {
             helperText: 'Please type the available game code here',
           ),
           const SizedBox(height: 8.0),
-          AppButton.expanded(
+          AppButton(
             label: 'Join game',
             onPressed: () async {
               try {

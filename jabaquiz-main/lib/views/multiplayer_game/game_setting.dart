@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jabaquiz/models/multiplayer_game.dart';
 import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_host_intro.dart';
+import 'package:jabaquiz/views/multiplayer_game/host_interface.dart';
 import 'package:jabaquiz/widgets/app_button.dart';
 import 'package:jabaquiz/widgets/app_input_field.dart';
 import 'package:jabaquiz/widgets/app_screen.dart';
@@ -32,7 +33,7 @@ class MultiplayerGameSettings extends StatelessWidget {
             controller: secondsPerQuestionController,
           ),
           const SizedBox(height: 8.0),
-          AppButton.expanded(
+          AppButton(
             label: 'Create game',
             onPressed: () async {
               try {
@@ -40,16 +41,12 @@ class MultiplayerGameSettings extends StatelessWidget {
                     int.tryParse(numOfQuestionsController.text) ?? 5;
                 final secondsToAnswer =
                     int.tryParse(secondsPerQuestionController.text) ?? 5;
-                switchScreen(
-                  context,
-                  ScreenLoader(
-                    future: Services.of(context)
-                        .gameService
-                        .newMultiplayerGame(numOfQuestions, secondsToAnswer),
-                    builder: (context, game) =>
-                        MultiplayerGameHostIntro(game: game),
-                  ),
-                );
+
+                MultiplayerGame game = await Services.of(context)
+                    .gameService
+                    .newMultiplayerGame(numOfQuestions, secondsToAnswer);
+
+                switchScreen(context, MultiplayerGameHostIntro(game: game));
               } on InvalidInputException catch (ex) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(

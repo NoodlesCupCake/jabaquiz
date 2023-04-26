@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_search.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_settings.dart';
+import 'package:jabaquiz/views/multiplayer_game/joining_room.dart';
+import 'package:jabaquiz/views/multiplayer_game/game_setting.dart';
 import 'package:jabaquiz/widgets/app_button.dart';
 
 class TitleScreen extends StatelessWidget {
@@ -18,7 +18,7 @@ class TitleScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.displayMedium,
           ),
         ),
-        AppButton.expanded(
+        AppButton(
           label: 'Join game',
           onPressed: () {
             Navigator.push(
@@ -29,7 +29,7 @@ class TitleScreen extends StatelessWidget {
             );
           },
         ),
-        AppButton.expanded(
+        AppButton(
           label: 'Host game',
           onPressed: () async {
             Navigator.push(

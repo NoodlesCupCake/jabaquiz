@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:jabaquiz/repositories/trivia_repository.dart';
+import 'package:jabaquiz/services/trivia_service.dart';
 import 'package:jabaquiz/services/auth_service.dart';
 import 'package:jabaquiz/services/game_service.dart';
 

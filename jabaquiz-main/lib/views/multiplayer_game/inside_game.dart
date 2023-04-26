@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:jabaquiz/models/game_question.dart';
-import 'package:jabaquiz/models/game_status.dart';
 import 'package:jabaquiz/models/multiplayer_game.dart';
 import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_answer_selection.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_scoreboard.dart';
+import 'package:jabaquiz/views/multiplayer_game/answer_selection.dart';
+import 'package:jabaquiz/views/multiplayer_game/scoreboard.dart';
 import 'package:jabaquiz/widgets/screen_loader.dart';
 
 class MultiplayerGameManager {
@@ -82,7 +81,7 @@ class _MultiplayerGameViewState extends State<MultiplayerGameView> {
       switchScreen(
         context,
         ScreenLoader(
-          loadingText: 'The winner is...',
+          loadingText: 'The winner is..',
           future: Services.of(context).gameService.getScores(widget.game.id),
           builder: (context, scores) => MultiplayerGameScoreboard(
             scores: scores,

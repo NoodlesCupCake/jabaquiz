@@ -6,7 +6,7 @@ import 'package:jabaquiz/models/game_status.dart';
 import 'package:jabaquiz/models/multiplayer_game.dart';
 import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services/game_service.dart';
-import 'package:jabaquiz/views/multiplayer_game/multiplayer_game_view.dart';
+import 'package:jabaquiz/views/multiplayer_game/inside_game.dart';
 import 'package:jabaquiz/widgets/players_in_game.dart';
 
 class MultiplayerGamePlayerIntro extends StatefulWidget {
@@ -36,10 +36,6 @@ class _MultiplayerGamePlayerIntroState
         Text(
           'Waiting for host to start the game...',
           textAlign: TextAlign.center,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: LinearProgressIndicator(),
         ),
         PlayersInGame(gameId: widget.game.id),
       ],

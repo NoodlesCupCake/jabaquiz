@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jabaquiz/dependencies.dart';
 import 'package:jabaquiz/services.dart';
 import 'package:jabaquiz/theme.dart';
-import 'package:jabaquiz/views/intro_screen.dart';
+import 'package:jabaquiz/views/nickname_selection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +23,7 @@ class JabaquizApp extends StatelessWidget {
         title: 'Jabaquiz',
         theme: theme,
         home: IntroScreen(),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

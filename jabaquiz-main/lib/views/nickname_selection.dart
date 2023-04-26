@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jabaquiz/navigation.dart';
 import 'package:jabaquiz/services.dart';
 import 'package:jabaquiz/services/nickname_generator.dart';
-import 'package:jabaquiz/views/title_screen.dart';
+import 'package:jabaquiz/views/mode_selection.dart';
 import 'package:jabaquiz/widgets/app_button.dart';
 import 'package:jabaquiz/widgets/app_input_field.dart';
 import 'package:jabaquiz/widgets/app_screen.dart';
@@ -25,21 +25,17 @@ class IntroScreen extends StatelessWidget {
             controller: _nicknameController,
             helperText: 'Please type your nickname here',
           ),
-          Row(
-            children: [
-              Expanded(
-                child: AppButton(
-                  label: 'Play',
-                  onPressed: () async {
-                    await Services.of(context)
-                        .authService
-                        .signIn(_nicknameController.text);
-                    switchScreen(context, const TitleScreen());
-                  },
-                ),
-              ),
-            ],
-          ),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            AppButton(
+              label: 'Play',
+              onPressed: () async {
+                await Services.of(context)
+                    .authService
+                    .signIn(_nicknameController.text);
+                switchScreen(context, const TitleScreen());
+              },
+            ),
+          ]),
         ],
       ),
     );

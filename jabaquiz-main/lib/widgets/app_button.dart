@@ -42,7 +42,7 @@ class AppButton extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Material(
         elevation: 8.0,
-        child: OutlinedButton(
+        child: FilledButton(
           onPressed: onPressed,
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
